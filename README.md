@@ -37,12 +37,12 @@ As a short getting started guide:
 package main
 
 import (
-  "github.com/nshrest/gogobosh"
+  "github.com/nshrest/gobosh"
   "fmt"
 )
 
 func main() {
-  c, _ := gogobosh.NewClient(gogobosh.DefaultConfig())
+  c, _ := gogobosh.NewClient(gobosh.DefaultConfig())
   info, _ := c.GetInfo()
 
   fmt.Println("Director")
@@ -56,4 +56,4 @@ func main() {
 
 ## Tests
 
-Tests  are all local currently; and do not test against a running bosh or bosh-lite.
+Tests  are all local currently; and do not test against a running bosh.
