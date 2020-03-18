@@ -3,12 +3,12 @@ package gobosh_test
 const certificates = `[
 {
 	"certificate_path": "director_ssl",
-	"expiry": "2020-02-01 08:20:34 UTC",
+	"expiry": "2030-02-25T20:58:20Z",
 	"days_left": 20
 },
 {
 	"certificate_path": "uaa_ssl",
-	"expiry": "2020-02-01 08:20:34 UTC",
+	"expiry": "2030-02-25T20:58:20Z",
 	"days_left": 20
 }
 ]`
@@ -24,7 +24,7 @@ const stemcells = `[
 
 const releases = `[
   {
-    "name": "bosh-warden-cpi",
+    "name": "bosh2",
     "release_versions": [
       {
         "version": "28",

@@ -38,7 +38,7 @@ func setupMultiple(mockEndpoints []MockRoute, authType string) {
 
 	for _, mock := range mockEndpoints {
 		method := mock.Method
-		endpoint := mock.Output
+		endpoint := mock.Endpoint
 		output := mock.Output
 		redirect := mock.Redirect
 
