@@ -1,5 +1,7 @@
 package gobosh
 
+import "time"
+
 // Info struct
 type Info struct {
 	Name               string             `json:"name"`
@@ -197,7 +199,7 @@ type Cfg struct {
 
 // Certificate struct
 type Certificate struct {
-	Name     string `json:"certificate_path"`
-	Expiry   string `json:"expiry"`
-	DaysLeft int    `json:"days_left"`
+	Name     string    `json:"certificate_path"`
+	Expiry   time.Time `json:"expiry"`
+	DaysLeft int       `json:"days_left"`
 }
