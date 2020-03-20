@@ -2,7 +2,6 @@ package gobosh_test
 
 import (
 	. "gobosh"
-	"time"
 
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
@@ -32,8 +31,7 @@ var _ = Describe("Api", func() {
 				certificates, err := client.GetCertificates()
 				Expect(err).Should(BeNil())
 				Expect(certificates[0].Name).Should(Equal("director_ssl"))
-				Expect(certificates[0].Expiry).Should(BeTemporally(">", time.Now()))
-				Expect(certificates[0].Expiry.IsZero()).ShouldNot(BeTrue())
+				Expect(certificates[0].Expiry).Should(Equal("2030-02-25T20:58:20Z"))
 				Expect(certificates[0].DaysLeft).Should(BeNumerically("==", 20))
 				Expect(certificates[0].DaysLeft).Should(Equal(20))
 			})
